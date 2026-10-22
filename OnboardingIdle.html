@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Fit · 온보딩 · 카드 평가 · 좋음 누르기 전</title>
+<style>
+@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:url(assets/font/Pretendard-Regular.woff2) format("woff2")}
+@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:url(assets/font/Pretendard-Bold.woff2) format("woff2")}
+body{margin:0;background:#F7F5F1;color:#15171C}
+a{color:#15171C}a:hover{color:#000000}
+button{font-family:inherit;cursor:pointer}
+
+*{scrollbar-width:none}
+::-webkit-scrollbar{display:none;width:0;height:0}
+
+html,body{height:100%;margin:0}
+body{background:#E7E3DC !important;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:Pretendard,'Apple SD Gothic Neo',sans-serif}
+.stage{width:402px;height:874px;flex-shrink:0;transform-origin:center center}
+.phone{width:402px;height:874px;border-radius:44px;overflow:hidden;box-shadow:0 24px 64px rgba(21,23,28,.18),0 0 0 8px #15171C;background:#F7F5F1;position:relative}
+body.mobile .phone{border-radius:0;box-shadow:none}
+body.mobile .gallery-link{display:none}
+.gallery-link{position:fixed;left:24px;top:24px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#15171C;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;box-shadow:0 4px 16px rgba(21,23,28,.08)}
+#demo-toast{position:absolute;left:20px;right:20px;bottom:104px;min-height:48px;box-sizing:border-box;padding:12px 16px;border-radius:16px;background:#15171C;color:#FFFFFF;font-size:14px;font-weight:700;line-height:20px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:50}
+#demo-toast.show{opacity:1;transform:none}
+#login-error{display:none;margin:-8px 0 0;font-size:12px;line-height:16px;color:#E5484D;font-weight:700}
+#login-error.show{display:block}
+.demo-hint{margin:-8px 0 0;font-size:12px;line-height:16px;color:#8A8D94;text-align:center}
+.demo-hint b{color:#15171C}
+</style>
+</head>
+<body data-page="OnboardingIdle">
+<a class="gallery-link" href="screens.html">전체 화면 보기</a>
+<div class="stage"><div class="phone">
+<div style="width: 402px; height: 874px; box-sizing: border-box; background: #F7F5F1; position: relative; overflow: hidden; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; color: #15171C">
+
+  <div style="padding: 64px 20px 0 20px; display: flex; flex-direction: column; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <div style="height: 44px; display: flex; justify-content: space-between; align-items: center">
+        <span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">2 <span style="font-weight: 400; color: #8A8D94">/ 5</span></span>
+        <a href="PreferenceNone.html" style="font-size: 14px; font-weight: 400; line-height: 20px; color: #8A8D94; text-decoration: none; height: 44px; display: flex; align-items: center">건너뛰기</a>
+      </div>
+      <div role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" aria-label="취향 평가 진행" style="height: 8px; border-radius: 4px; background: #E7E3DC; display: flex">
+        <div style="width: 40%; height: 8px; border-radius: 4px; background: #15171C"></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <h1 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px">이 룩, 어때요?</h1>
+      <p style="margin: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94">카드 3~5장만 평가하면 취향을 알 수 있어요</p>
+    </div>
+    <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 16px">
+      <div style="height: 344px; border-radius: 16px; background: #DCD7D0; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px"><svg width="120" height="171" viewBox="0 0 140 200" fill="none" stroke="#B5AFA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none"><path d="M45 20l-25 15 8 30 12-5v55h60V60l12 5 8-30-25-15c-5 10-15 14-25 14S50 30 45 20z"></path><path d="M40 115l-6 70h28l8-50 8 50h28l-6-70z"></path></svg><span style="font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; color: #7A756C; display: none">[룩 이미지]</span><img src="assets/img/91367ee370c510b9ef4fb90ac0fd0cec.png" alt="1-" width="1000" height="1000" style="max-width: 100%; height: auto; display: block; object-fit: cover; width: 1000px; aspect-ratio: 1000 / 1000"></div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; line-height: 16px; color: #15171C"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F5B942; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>빈티지</span>
+        <div style="font-size: 18px; font-weight: 700; line-height: 26px">네이비 후드 재킷 + 체크 패치 스커트 레이어드</div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+        <button style="height: 52px; padding: 0 16px; border-radius: 26px; border: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: #E7E3DC; color: #15171C">싫음</button>
+        <button style="height: 52px; padding: 0 16px; border-radius: 26px; border: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: #E7E3DC; color: #15171C">보통</button>
+        <button style="height: 52px; padding: 0 16px; border-radius: 26px; border: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: #E7E3DC; color: #15171C"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>좋음</button>
+      </div>
+      <p style="margin: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; text-align: center">평가는 바로 추천에 반영돼요</p>
+    </div>
+  </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

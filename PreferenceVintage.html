@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Fit · 취향 선택 · 스타일 · 빈티지만 선택</title>
+<style>
+@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:url(assets/font/Pretendard-Regular.woff2) format("woff2")}
+@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:url(assets/font/Pretendard-Bold.woff2) format("woff2")}
+body{margin:0;background:#F7F5F1;color:#15171C}
+a{color:#15171C}a:hover{color:#000000}
+button{font-family:inherit;cursor:pointer}
+
+*{scrollbar-width:none}
+::-webkit-scrollbar{display:none;width:0;height:0}
+
+html,body{height:100%;margin:0}
+body{background:#E7E3DC !important;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:Pretendard,'Apple SD Gothic Neo',sans-serif}
+.stage{width:402px;height:874px;flex-shrink:0;transform-origin:center center}
+.phone{width:402px;height:874px;border-radius:44px;overflow:hidden;box-shadow:0 24px 64px rgba(21,23,28,.18),0 0 0 8px #15171C;background:#F7F5F1;position:relative}
+body.mobile .phone{border-radius:0;box-shadow:none}
+body.mobile .gallery-link{display:none}
+.gallery-link{position:fixed;left:24px;top:24px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#15171C;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;box-shadow:0 4px 16px rgba(21,23,28,.08)}
+#demo-toast{position:absolute;left:20px;right:20px;bottom:104px;min-height:48px;box-sizing:border-box;padding:12px 16px;border-radius:16px;background:#15171C;color:#FFFFFF;font-size:14px;font-weight:700;line-height:20px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:50}
+#demo-toast.show{opacity:1;transform:none}
+#login-error{display:none;margin:-8px 0 0;font-size:12px;line-height:16px;color:#E5484D;font-weight:700}
+#login-error.show{display:block}
+.demo-hint{margin:-8px 0 0;font-size:12px;line-height:16px;color:#8A8D94;text-align:center}
+.demo-hint b{color:#15171C}
+</style>
+</head>
+<body data-page="PreferenceVintage">
+<a class="gallery-link" href="screens.html">전체 화면 보기</a>
+<div class="stage"><div class="phone">
+<div style="width: 402px; height: 874px; box-sizing: border-box; background: #F7F5F1; position: relative; overflow: hidden; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; color: #15171C">
+
+  <div style="padding: 64px 20px 0 20px; display: flex; flex-direction: column; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <div style="height: 44px; display: flex; justify-content: space-between; align-items: center">
+        <a href="OnboardingIdle.html" aria-label="뒤로" style="width: 44px; height: 44px; border-radius: 22px; background: #F7F5F1; display: flex; align-items: center; justify-content: flex-start; flex-shrink: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+        <span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">5 <span style="font-weight: 400; color: #8A8D94">/ 5</span></span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <h1 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px">좋아하는 스타일을 골라주세요</h1>
+        <p style="margin: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94">여러 개 골라도 좋아요 · 1개 선택됨</p>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+      <button aria-pressed="false" style="height: 56px; box-sizing: border-box; padding: 0 16px; border-radius: 16px; border: none; background: #FFFFFF; color: #15171C; display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #FF6B6B; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>캐주얼</span><span style="width: 22px; height: 22px; border-radius: 12px; border: 1px solid #ECE9E3"></span>
+      </button>
+      <button aria-pressed="true" style="height: 56px; box-sizing: border-box; padding: 0 16px; border-radius: 16px; border: none; background: #15171C; color: #FFFFFF; display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F5B942; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>빈티지</span><span style="width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span>
+      </button>
+      <button aria-pressed="false" style="height: 56px; box-sizing: border-box; padding: 0 16px; border-radius: 16px; border: none; background: #FFFFFF; color: #15171C; display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #4C94FF; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>스트릿</span><span style="width: 22px; height: 22px; border-radius: 12px; border: 1px solid #ECE9E3"></span>
+      </button>
+      <button aria-pressed="false" style="height: 56px; box-sizing: border-box; padding: 0 16px; border-radius: 16px; border: none; background: #FFFFFF; color: #15171C; display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #E879A8; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>페미닌</span><span style="width: 22px; height: 22px; border-radius: 12px; border: 1px solid #ECE9E3"></span>
+      </button>
+      <button aria-pressed="false" style="height: 56px; box-sizing: border-box; padding: 0 16px; border-radius: 16px; border: none; background: #FFFFFF; color: #15171C; display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #45C4A8; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>고프코어</span><span style="width: 22px; height: 22px; border-radius: 12px; border: 1px solid #ECE9E3"></span>
+      </button>
+      <button aria-pressed="false" style="height: 56px; box-sizing: border-box; padding: 0 16px; border-radius: 16px; border: none; background: #FFFFFF; color: #15171C; display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #8B5CF6; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>긱시크</span><span style="width: 22px; height: 22px; border-radius: 12px; border: 1px solid #ECE9E3"></span>
+      </button>
+      <button aria-pressed="false" style="height: 56px; box-sizing: border-box; padding: 0 16px; border-radius: 16px; border: none; background: #FFFFFF; color: #15171C; display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #6BAB74; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>스포티</span><span style="width: 22px; height: 22px; border-radius: 12px; border: 1px solid #ECE9E3"></span>
+      </button>
+      <button aria-pressed="false" style="height: 56px; box-sizing: border-box; padding: 0 16px; border-radius: 16px; border: none; background: #FFFFFF; color: #15171C; display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #64748B; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>오피스</span><span style="width: 22px; height: 22px; border-radius: 12px; border: 1px solid #ECE9E3"></span>
+      </button>
+    </div>
+  </div>
+  <div style="position: absolute; left: 20px; right: 20px; bottom: 24px">
+    <a href="OnboardingDone.html" style="height: 52px; padding: 0 16px; border-radius: 26px; border: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: #15171C; color: #FFFFFF">추천 받기</a>
+  </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

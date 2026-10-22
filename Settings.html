@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Fit · 설정</title>
+<style>
+@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:url(assets/font/Pretendard-Regular.woff2) format("woff2")}
+@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:url(assets/font/Pretendard-Bold.woff2) format("woff2")}
+body{margin:0;background:#F7F5F1;color:#15171C}
+a{color:#15171C}a:hover{color:#000000}
+button{font-family:inherit;cursor:pointer}
+
+*{scrollbar-width:none}
+::-webkit-scrollbar{display:none;width:0;height:0}
+
+html,body{height:100%;margin:0}
+body{background:#E7E3DC !important;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:Pretendard,'Apple SD Gothic Neo',sans-serif}
+.stage{width:402px;height:874px;flex-shrink:0;transform-origin:center center}
+.phone{width:402px;height:874px;border-radius:44px;overflow:hidden;box-shadow:0 24px 64px rgba(21,23,28,.18),0 0 0 8px #15171C;background:#F7F5F1;position:relative}
+body.mobile .phone{border-radius:0;box-shadow:none}
+body.mobile .gallery-link{display:none}
+.gallery-link{position:fixed;left:24px;top:24px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#15171C;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;box-shadow:0 4px 16px rgba(21,23,28,.08)}
+#demo-toast{position:absolute;left:20px;right:20px;bottom:104px;min-height:48px;box-sizing:border-box;padding:12px 16px;border-radius:16px;background:#15171C;color:#FFFFFF;font-size:14px;font-weight:700;line-height:20px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:50}
+#demo-toast.show{opacity:1;transform:none}
+#login-error{display:none;margin:-8px 0 0;font-size:12px;line-height:16px;color:#E5484D;font-weight:700}
+#login-error.show{display:block}
+.demo-hint{margin:-8px 0 0;font-size:12px;line-height:16px;color:#8A8D94;text-align:center}
+.demo-hint b{color:#15171C}
+</style>
+</head>
+<body data-page="Settings">
+<a class="gallery-link" href="screens.html">전체 화면 보기</a>
+<div class="stage"><div class="phone">
+<div style="width: 402px; height: 874px; box-sizing: border-box; background: #F7F5F1; position: relative; overflow: hidden; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; color: #15171C">
+
+  <div style="padding: 64px 20px 0 20px; display: flex; flex-direction: column; gap: 24px">
+    <div style="height: 44px; display: flex; align-items: center; gap: 8px">
+      <a href="My.html" aria-label="마이로" style="width: 32px; height: 44px; border-radius: 22px; background: #F7F5F1; display: flex; align-items: center; justify-content: flex-start; flex-shrink: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+      <h1 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px">설정</h1>
+    </div>
+    <section style="display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0; padding: 0 8px; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; font-weight: 700">계정</h2>
+      <div style="border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column">
+        <a href="#" style="height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: #15171C">
+          <span style="font-size: 14px; font-weight: 400; line-height: 20px">프로필 수정</span><span style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></span>
+        </a>
+        <div style="height: 1px; background: #ECE9E3; margin: 0 16px"></div>
+        <div style="height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between">
+          <span style="font-size: 14px; font-weight: 400; line-height: 20px">이메일</span><span style="font-size: 14px; font-weight: 400; line-height: 20px; color: #8A8D94">name@example.com</span>
+        </div>
+        <div style="height: 1px; background: #ECE9E3; margin: 0 16px"></div>
+        <a href="#" style="height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: #15171C">
+          <span style="font-size: 14px; font-weight: 400; line-height: 20px">비밀번호 변경</span><span style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></span>
+        </a>
+      </div>
+    </section>
+    <section style="display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0; padding: 0 8px; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; font-weight: 700">알림</h2>
+      <div style="border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column">
+        <div style="height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between">
+          <span style="font-size: 14px; font-weight: 400; line-height: 20px">추천 알림</span><button role="switch" aria-checked="true" aria-label="추천 알림" style="width: 52px; height: 32px; box-sizing: border-box; padding: 4px; border-radius: 16px; border: none; background: #15171C; display: flex; align-items: center; justify-content: flex-end; flex-shrink: 0"><span style="width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,28,0.16)"></span></button>
+        </div>
+        <div style="height: 1px; background: #ECE9E3; margin: 0 16px"></div>
+        <div style="height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between">
+          <span style="font-size: 14px; font-weight: 400; line-height: 20px">투표 결과 알림</span><button role="switch" aria-checked="true" aria-label="투표 결과 알림" style="width: 52px; height: 32px; box-sizing: border-box; padding: 4px; border-radius: 16px; border: none; background: #15171C; display: flex; align-items: center; justify-content: flex-end; flex-shrink: 0"><span style="width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,28,0.16)"></span></button>
+        </div>
+        <div style="height: 1px; background: #ECE9E3; margin: 0 16px"></div>
+        <div style="height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between">
+          <span style="font-size: 14px; font-weight: 400; line-height: 20px">마케팅 알림</span><button role="switch" aria-checked="false" aria-label="마케팅 알림" style="width: 52px; height: 32px; box-sizing: border-box; padding: 4px; border-radius: 16px; border: none; background: #E7E3DC; display: flex; align-items: center; justify-content: flex-start; flex-shrink: 0"><span style="width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,28,0.16)"></span></button>
+        </div>
+      </div>
+    </section>
+    <section style="display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0; padding: 0 8px; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; font-weight: 700">앱 설정</h2>
+      <div style="border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column">
+        <div style="height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between">
+          <span style="font-size: 14px; font-weight: 400; line-height: 20px">다크 모드</span><button role="switch" aria-checked="false" aria-label="다크 모드" style="width: 52px; height: 32px; box-sizing: border-box; padding: 4px; border-radius: 16px; border: none; background: #E7E3DC; display: flex; align-items: center; justify-content: flex-start; flex-shrink: 0"><span style="width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,28,0.16)"></span></button>
+        </div>
+        <div style="height: 1px; background: #ECE9E3; margin: 0 16px"></div>
+        <a href="#" style="height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: #15171C">
+          <span style="font-size: 14px; font-weight: 400; line-height: 20px">권한 관리</span><span style="display: flex; align-items: center; gap: 8px"><span style="font-size: 14px; font-weight: 400; line-height: 20px; color: #8A8D94">사진 · 위치</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></span>
+        </a>
+        <div style="height: 1px; background: #ECE9E3; margin: 0 16px"></div>
+        <div style="height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between">
+          <span style="font-size: 14px; font-weight: 400; line-height: 20px">버전 정보</span><span style="font-size: 14px; font-weight: 400; line-height: 20px; color: #8A8D94">[버전]</span>
+        </div>
+      </div>
+    </section>
+    <div style="display: flex; justify-content: center; gap: 24px">
+      <a href="LogoutPopup.html" style="height: 44px; display: flex; align-items: center; font-size: 14px; font-weight: 400; line-height: 20px; color: #8A8D94; text-decoration: none">로그아웃</a>
+      <a href="Account.html" style="height: 44px; display: flex; align-items: center; font-size: 14px; font-weight: 400; line-height: 20px; color: #8A8D94; text-decoration: none">회원 탈퇴</a>
+    </div>
+  </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

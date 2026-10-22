@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Fit · 아이템 정보</title>
+<style>
+@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:url(assets/font/Pretendard-Regular.woff2) format("woff2")}
+@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:url(assets/font/Pretendard-Bold.woff2) format("woff2")}
+body{margin:0;background:#F7F5F1;color:#15171C}
+a{color:#15171C}a:hover{color:#000000}
+button{font-family:inherit;cursor:pointer}
+
+*{scrollbar-width:none}
+::-webkit-scrollbar{display:none;width:0;height:0}
+
+html,body{height:100%;margin:0}
+body{background:#E7E3DC !important;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:Pretendard,'Apple SD Gothic Neo',sans-serif}
+.stage{width:402px;height:874px;flex-shrink:0;transform-origin:center center}
+.phone{width:402px;height:874px;border-radius:44px;overflow:hidden;box-shadow:0 24px 64px rgba(21,23,28,.18),0 0 0 8px #15171C;background:#F7F5F1;position:relative}
+body.mobile .phone{border-radius:0;box-shadow:none}
+body.mobile .gallery-link{display:none}
+.gallery-link{position:fixed;left:24px;top:24px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#15171C;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;box-shadow:0 4px 16px rgba(21,23,28,.08)}
+#demo-toast{position:absolute;left:20px;right:20px;bottom:104px;min-height:48px;box-sizing:border-box;padding:12px 16px;border-radius:16px;background:#15171C;color:#FFFFFF;font-size:14px;font-weight:700;line-height:20px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:50}
+#demo-toast.show{opacity:1;transform:none}
+#login-error{display:none;margin:-8px 0 0;font-size:12px;line-height:16px;color:#E5484D;font-weight:700}
+#login-error.show{display:block}
+.demo-hint{margin:-8px 0 0;font-size:12px;line-height:16px;color:#8A8D94;text-align:center}
+.demo-hint b{color:#15171C}
+</style>
+</head>
+<body data-page="ItemInfo">
+<a class="gallery-link" href="screens.html">전체 화면 보기</a>
+<div class="stage"><div class="phone">
+<div style="width: 402px; height: 874px; box-sizing: border-box; background: #F7F5F1; position: relative; overflow: hidden; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; color: #15171C">
+
+  <div style="padding: 64px 20px 0 20px; display: flex; flex-direction: column; gap: 24px">
+    <div style="height: 44px; display: flex; align-items: center; gap: 8px">
+      <a href="LookDetail.html" aria-label="룩 상세로" style="width: 32px; height: 44px; border-radius: 22px; background: #F7F5F1; display: flex; align-items: center; justify-content: flex-start; flex-shrink: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+      <h1 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px">아이템 정보</h1>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; line-height: 16px; color: #15171C"><span style="width: 8px; height: 8px; border-radius: 50%; background: #FF6B6B; min-width: 8px; min-height: 8px; flex-shrink: 0; aspect-ratio: 1 / 1; display: inline-block"></span>캐주얼</span>
+      <h2 style="margin: 0; font-size: 18px; font-weight: 700; line-height: 26px">아이보리 오프숄더 니트 + 와이드 데님</h2>
+      <p style="margin: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94">이 룩에 들어간 추천 아이템 2개예요</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px">
+    <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; align-items: center; gap: 16px">
+      <div style="width: 80px; height: 80px; border-radius: 16px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; background-color: transparent"><img src="assets/img/5cab321a481fda72b81859c29de4fa24.png" alt="1" width="943" height="1087" style="max-width: 100%; height: 71px; display: block; object-fit: cover; width: 51px; aspect-ratio: 943 / 1087; object-position: 71.4387% 24.4568%; object-view-box: inset(1.6108% 2.6294% 4.9756% 6.5768%)"></div>
+      <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 8px"><span style="font-size: 12px; font-weight: 400; line-height: 16px; color: rgb(138, 141, 148)">상의 · [페이지플린]</span>
+          <span style="font-size: 14px; line-height: 20px; font-weight: 700">언발 카라 와이드넥 니트</span>
+      </div>
+      <a href="#" style="height: 44px; display: flex; align-items: center; gap: 0; align-self: center; flex-shrink: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; text-decoration: none"><span>구매처</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+    </div>
+    <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; align-items: center; gap: 16px">
+      <div style="width: 80px; height: 80px; border-radius: 16px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; background-color: transparent"><img src="assets/img/70139f79c2a3be3713c77c18b0b39bb4.png" alt="image" width="943" height="1087" style="max-width: 100%; height: 84px; display: block; object-fit: cover; width: 75px; aspect-ratio: 943 / 1087"></div>
+      <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 8px"><span style="font-size: 12px; font-weight: 400; line-height: 16px; color: rgb(138, 141, 148)">하의 · [페이지플린]</span>
+          <span style="font-size: 14px; line-height: 20px; font-weight: 700">사이드컷 라인 데님 팬츠</span>
+      </div>
+      <a href="#" style="height: 44px; display: flex; align-items: center; gap: 0; align-self: center; flex-shrink: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; text-decoration: none">구매처<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+    </div>
+    </div>
+    <section style="display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <h2 style="margin: 0; font-size: 18px; font-weight: 700; line-height: 26px">이런 아이템은 어때요?</h2>
+        <p style="margin: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94">이 룩과 잘 어울리는 신발과 가방이에요</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+      <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; align-items: center; gap: 16px">
+        <div style="width: 80px; height: 80px; border-radius: 16px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; background-color: transparent"><img src="assets/img/cb0b14a7ac90e2510e0cec6138cb0a52.png" alt="3" width="1000" height="1000" style="max-width: 100%; height: auto; display: block; object-fit: cover; width: 1000px; aspect-ratio: 1000 / 1000"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 8px"><span style="font-size: 12px; font-weight: 400; line-height: 16px; color: rgb(138, 141, 148)">신발 · [아디다스]</span>
+            <span style="font-size: 14px; line-height: 20px; font-weight: 700">삼바 OG - 베이지:블랙</span>
+        </div>
+        <a href="#" style="height: 44px; display: flex; align-items: center; gap: 0; align-self: center; flex-shrink: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; text-decoration: none">구매처<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+      </div>
+      <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; align-items: center; gap: 16px">
+        <div style="width: 80px; height: 80px; border-radius: 16px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; background-color: transparent"><img src="assets/img/f9ede4108abada532e3a19dc1615653c.png" alt="4" width="1000" height="1000" style="max-width: 100%; height: 77px; display: block; object-fit: cover; width: 75px; aspect-ratio: 1000 / 1000"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 8px"><span style="font-size: 12px; font-weight: 400; line-height: 16px; color: rgb(138, 141, 148)">가방 · [스탠드오일]</span>
+            <span style="font-size: 14px; line-height: 20px; font-weight: 700">Mingle Bag / 마론</span>
+        </div>
+        <a href="#" style="height: 44px; display: flex; align-items: center; gap: 0; align-self: center; flex-shrink: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; text-decoration: none">구매처<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+      </div>
+      </div>
+    </section>
+  </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Fit · 룩 상세 · 저장 전</title>
+<style>
+@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:url(assets/font/Pretendard-Regular.woff2) format("woff2")}
+@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:url(assets/font/Pretendard-Bold.woff2) format("woff2")}
+body{margin:0;background:#F7F5F1;color:#15171C}
+a{color:#15171C}a:hover{color:#000000}
+button{font-family:inherit;cursor:pointer}
+
+*{scrollbar-width:none}
+::-webkit-scrollbar{display:none;width:0;height:0}
+
+html,body{height:100%;margin:0}
+body{background:#E7E3DC !important;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:Pretendard,'Apple SD Gothic Neo',sans-serif}
+.stage{width:402px;height:874px;flex-shrink:0;transform-origin:center center}
+.phone{width:402px;height:874px;border-radius:44px;overflow:hidden;box-shadow:0 24px 64px rgba(21,23,28,.18),0 0 0 8px #15171C;background:#F7F5F1;position:relative}
+body.mobile .phone{border-radius:0;box-shadow:none}
+body.mobile .gallery-link{display:none}
+.gallery-link{position:fixed;left:24px;top:24px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#15171C;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;box-shadow:0 4px 16px rgba(21,23,28,.08)}
+#demo-toast{position:absolute;left:20px;right:20px;bottom:104px;min-height:48px;box-sizing:border-box;padding:12px 16px;border-radius:16px;background:#15171C;color:#FFFFFF;font-size:14px;font-weight:700;line-height:20px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:50}
+#demo-toast.show{opacity:1;transform:none}
+#login-error{display:none;margin:-8px 0 0;font-size:12px;line-height:16px;color:#E5484D;font-weight:700}
+#login-error.show{display:block}
+.demo-hint{margin:-8px 0 0;font-size:12px;line-height:16px;color:#8A8D94;text-align:center}
+.demo-hint b{color:#15171C}
+</style>
+</head>
+<body data-page="LookDetailUnsaved">
+<a class="gallery-link" href="screens.html">전체 화면 보기</a>
+<div class="stage"><div class="phone">
+<div style="width: 402px; height: 874px; box-sizing: border-box; background: #F7F5F1; position: relative; overflow: hidden; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; color: #15171C">
+
+  <div style="padding: 64px 20px 0 20px; display: flex; flex-direction: column; gap: 16px">
+    <div style="height: 44px; display: flex; justify-content: space-between; align-items: center">
+      <div style="display: flex; align-items: center; gap: 8px">
+        <a href="Lookbook.html" aria-label="룩북으로" style="width: 32px; height: 44px; border-radius: 22px; background: #F7F5F1; display: flex; align-items: center; justify-content: flex-start; flex-shrink: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+        <h1 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px">룩 상세</h1>
+      </div>
+      <button aria-label="공유" style="width: 44px; height: 44px; border-radius: 22px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: none; padding: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"></path><path d="M7 8l5-5 5 5"></path><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"></path></svg></button>
+    </div>
+    <div style="height: 283px; border-radius: 16px; background: #DCD7D0; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; overflow: hidden"><img src="assets/img/010b0f6c237f5ad7b4d4c39b525318b6.png" alt="아이보리 오프숄더 니트와 와이드 데님 룩" style="display: block; width: 191px; height: 270px; object-fit: cover"></div>
+    <div aria-label="분위기 태그" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px"><div style="height: 24px; padding: 0 8px; border-radius: 12px; background: #FFFFFF; display: flex; align-items: center"><span style="font-size: 12px; font-weight: 700; line-height: 16px">#편안함</span></div><div style="height: 24px; padding: 0 8px; border-radius: 12px; background: #FFFFFF; display: flex; align-items: center"><span style="font-size: 12px; font-weight: 700; line-height: 16px">#따뜻함</span></div><div style="height: 24px; padding: 0 8px; border-radius: 12px; background: #FFFFFF; display: flex; align-items: center"><span style="font-size: 12px; font-weight: 700; line-height: 16px">#소프트</span></div><div style="height: 24px; padding: 0 8px; border-radius: 12px; background: #FFFFFF; display: flex; align-items: center"><span style="font-size: 12px; font-weight: 700; line-height: 16px">#데일리</span></div></div>
+    <h2 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px">아이보리 오프숄더 니트 + 와이드 데님</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+      <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+        <span style="font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"></path><path d="M5 19l7-7"></path></svg>계절</span>
+        <span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">가을</span>
+      </div>
+      <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+        <span style="font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"></path></svg>추천 기온</span>
+        <span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">15~20°</span>
+      </div>
+      <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+        <span style="font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94; display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4l-5 3 2 4 3-1v10h8V10l3 1 2-4-5-3c-1 1.5-2.5 2-4 2s-3-.5-4-2z"></path></svg>핏</span>
+        <span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">루즈핏</span>
+      </div>
+    </div>
+    <a href="ItemInfo.html" style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-decoration: none; color: #15171C">
+      <span style="display: flex; align-items: center; gap: 16px">
+        <span style="width: 40px; height: 40px; border-radius: 20px; background: #F7F5F1; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V5a2 2 0 0 1 2-2h7l9 9-9 9z"></path><circle cx="8" cy="8" r="1.5"></circle></svg></span>
+        <span style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; line-height: 20px; font-weight: 700">아이템 정보</span>
+        </span>
+      </span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+    </a>
+    <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+      <span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700; display: flex; align-items: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"></path></svg>스타일링 팁</span>
+      <span style="font-size: 14px; font-weight: 400; line-height: 20px">바지 밑단이 신발을 살짝 덮으면 비율이 좋아보여요</span>
+    </div>
+  </div>
+  <div style="position: absolute; left: 20px; right: 20px; bottom: 24px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+    <a href="LookDetailSaveToast.html" aria-pressed="false" style="height: 52px; padding: 0 16px; border-radius: 26px; border: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: #E7E3DC; color: #15171C"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"></path></svg>저장</a>
+    <button style="height: 52px; padding: 0 16px; border-radius: 26px; border: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: #E7E3DC; color: #15171C">비슷한 룩</button>
+  </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

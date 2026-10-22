@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Fit · 추천 없음</title>
+<style>
+@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:url(assets/font/Pretendard-Regular.woff2) format("woff2")}
+@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:url(assets/font/Pretendard-Bold.woff2) format("woff2")}
+body{margin:0;background:#F7F5F1;color:#15171C}
+a{color:#15171C}a:hover{color:#000000}
+button{font-family:inherit;cursor:pointer}
+
+*{scrollbar-width:none}
+::-webkit-scrollbar{display:none;width:0;height:0}
+
+html,body{height:100%;margin:0}
+body{background:#E7E3DC !important;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:Pretendard,'Apple SD Gothic Neo',sans-serif}
+.stage{width:402px;height:874px;flex-shrink:0;transform-origin:center center}
+.phone{width:402px;height:874px;border-radius:44px;overflow:hidden;box-shadow:0 24px 64px rgba(21,23,28,.18),0 0 0 8px #15171C;background:#F7F5F1;position:relative}
+body.mobile .phone{border-radius:0;box-shadow:none}
+body.mobile .gallery-link{display:none}
+.gallery-link{position:fixed;left:24px;top:24px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#15171C;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;box-shadow:0 4px 16px rgba(21,23,28,.08)}
+#demo-toast{position:absolute;left:20px;right:20px;bottom:104px;min-height:48px;box-sizing:border-box;padding:12px 16px;border-radius:16px;background:#15171C;color:#FFFFFF;font-size:14px;font-weight:700;line-height:20px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:50}
+#demo-toast.show{opacity:1;transform:none}
+#login-error{display:none;margin:-8px 0 0;font-size:12px;line-height:16px;color:#E5484D;font-weight:700}
+#login-error.show{display:block}
+.demo-hint{margin:-8px 0 0;font-size:12px;line-height:16px;color:#8A8D94;text-align:center}
+.demo-hint b{color:#15171C}
+</style>
+</head>
+<body data-page="NoResult">
+<a class="gallery-link" href="screens.html">전체 화면 보기</a>
+<div class="stage"><div class="phone">
+<div style="width: 402px; height: 874px; box-sizing: border-box; background: #F7F5F1; position: relative; overflow: hidden; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; color: #15171C">
+
+  <div style="padding: 64px 20px 0 20px; display: flex; flex-direction: column; gap: 16px">
+    <div style="height: 44px; display: flex; justify-content: space-between; align-items: center">
+      <div style="display: flex; align-items: center; gap: 8px">
+        <a href="Main.html" aria-label="홈으로" style="width: 32px; height: 44px; border-radius: 22px; background: #F7F5F1; display: flex; align-items: center; justify-content: flex-start; flex-shrink: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+        <h1 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px">추천 결과</h1>
+      </div>
+    </div>
+    <div style="display: flex"><span style="height: 36px; padding: 0 16px; border-radius: 18px; background: #E7E3DC; font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"></path></svg><span>여행 · 비 12°</span></span></div>
+    <div style="padding: 24px 0; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
+      <span style="width: 96px; height: 96px; border-radius: 48px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg></span>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <h2 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px">딱 맞는 룩을 못 찾았어요</h2>
+        <p style="margin: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94">숨긴 룩이 많거나 조건이 좁으면 생길 수 있어요</p>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <h3 style="margin: 0; font-size: 18px; font-weight: 700; line-height: 26px">이렇게 해볼까요?</h3>
+      <div style="border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column">
+      <a href="SituationSheetNone.html" style="height: 72px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; gap: 16px; text-decoration: none; color: #15171C">
+        <span style="width: 40px; height: 40px; border-radius: 20px; background: #F7F5F1; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="2"></rect><rect x="13" y="4" width="7" height="7" rx="2"></rect><rect x="4" y="13" width="7" height="7" rx="2"></rect><rect x="13" y="13" width="7" height="7" rx="2"></rect></svg></span>
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">다른 상황 고르기</span><span style="font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94">비슷한 상황에서 다시 찾아봐요</span></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </a>
+      <div style="height: 1px; background: #ECE9E3; margin: 0 16px"></div>
+      <a href="Result.html" style="height: 72px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; gap: 16px; text-decoration: none; color: #15171C">
+        <span style="width: 40px; height: 40px; border-radius: 20px; background: #F7F5F1; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"></path><path d="M10.6 5.1A10 10 0 0 1 12 5c5 0 9 5 9 7a9 9 0 0 1-2.2 3.2"></path><path d="M6.6 6.6C4.4 8 3 10.4 3 12c0 2 4 7 9 7a9 9 0 0 0 5.4-1.8"></path></svg></span>
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">숨긴 룩 다시 보기</span><span style="font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94">숨겼던 룩을 되돌릴 수 있어요</span></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </a>
+      <div style="height: 1px; background: #ECE9E3; margin: 0 16px"></div>
+      <a href="OnboardingIdle.html" style="height: 72px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; gap: 16px; text-decoration: none; color: #15171C">
+        <span style="width: 40px; height: 40px; border-radius: 20px; background: #F7F5F1; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"></path><path d="M20 4v5h-5"></path><path d="M20 12a8 8 0 0 1-14 5.3L4 15"></path><path d="M4 20v-5h5"></path></svg></span>
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">취향 다시 평가하기</span><span style="font-size: 12px; font-weight: 400; line-height: 16px; color: #8A8D94">카드 3~5장이면 충분해요</span></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </a>
+      </div>
+    </div>
+  </div>
+  <div style="position: absolute; left: 20px; right: 20px; bottom: 112px">
+    <a href="Result.html" style="height: 52px; padding: 0 16px; border-radius: 26px; border: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: #15171C; color: #FFFFFF">캐주얼 기본안 보기</a>
+  </div>
+  <nav aria-label="하단 탭" style="position: absolute; left: 20px; right: 20px; bottom: 24px; height: 64px; box-sizing: border-box; padding: 8px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 8px 24px rgba(21,23,28,0.08); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+    <a href="Main.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-decoration: none; color: #8A8D94; font-size: 12px; line-height: 12px; font-weight: 400"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4z"></path></svg>홈</a>
+    <a href="#" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-decoration: none; color: #15171C; font-size: 12px; line-height: 12px; font-weight: 700"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"></path></svg>추천</a>
+    <a href="Lookbook.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-decoration: none; color: #8A8D94; font-size: 12px; line-height: 12px; font-weight: 400"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"></rect><path d="M9 3v18"></path></svg>룩북</a>
+    <a href="My.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-decoration: none; color: #8A8D94; font-size: 12px; line-height: 12px; font-weight: 400"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"></path></svg>마이</a>
+  </nav>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

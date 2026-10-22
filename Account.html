@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Fit · 회원 탈퇴</title>
+<style>
+@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:url(assets/font/Pretendard-Regular.woff2) format("woff2")}
+@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:url(assets/font/Pretendard-Bold.woff2) format("woff2")}
+body{margin:0;background:#F7F5F1;color:#15171C}
+a{color:#15171C}a:hover{color:#000000}
+button{font-family:inherit;cursor:pointer}
+
+*{scrollbar-width:none}
+::-webkit-scrollbar{display:none;width:0;height:0}
+
+html,body{height:100%;margin:0}
+body{background:#E7E3DC !important;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:Pretendard,'Apple SD Gothic Neo',sans-serif}
+.stage{width:402px;height:874px;flex-shrink:0;transform-origin:center center}
+.phone{width:402px;height:874px;border-radius:44px;overflow:hidden;box-shadow:0 24px 64px rgba(21,23,28,.18),0 0 0 8px #15171C;background:#F7F5F1;position:relative}
+body.mobile .phone{border-radius:0;box-shadow:none}
+body.mobile .gallery-link{display:none}
+.gallery-link{position:fixed;left:24px;top:24px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#15171C;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;box-shadow:0 4px 16px rgba(21,23,28,.08)}
+#demo-toast{position:absolute;left:20px;right:20px;bottom:104px;min-height:48px;box-sizing:border-box;padding:12px 16px;border-radius:16px;background:#15171C;color:#FFFFFF;font-size:14px;font-weight:700;line-height:20px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:50}
+#demo-toast.show{opacity:1;transform:none}
+#login-error{display:none;margin:-8px 0 0;font-size:12px;line-height:16px;color:#E5484D;font-weight:700}
+#login-error.show{display:block}
+.demo-hint{margin:-8px 0 0;font-size:12px;line-height:16px;color:#8A8D94;text-align:center}
+.demo-hint b{color:#15171C}
+</style>
+</head>
+<body data-page="Account">
+<a class="gallery-link" href="screens.html">전체 화면 보기</a>
+<div class="stage"><div class="phone">
+<div style="width: 402px; height: 874px; box-sizing: border-box; background: #F7F5F1; position: relative; overflow: hidden; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; color: #15171C">
+
+  <div style="padding: 64px 20px 0 20px; display: flex; flex-direction: column; gap: 24px">
+    <div style="height: 44px; display: flex; align-items: center; gap: 8px">
+      <a href="Settings.html" aria-label="설정으로" style="width: 32px; height: 44px; border-radius: 22px; background: #F7F5F1; display: flex; align-items: center; justify-content: flex-start; flex-shrink: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+      <h1 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px">회원 탈퇴</h1>
+    </div>
+    <section style="display: flex; flex-direction: column; gap: 16px">
+      <div style="padding: 16px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 16px">
+        <span style="font-size: 14px; font-weight: 400; line-height: 20px; font-weight: 700">탈퇴하면 이렇게 돼요</span>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px">
+        <li style="display: flex; align-items: center; gap: 16px; font-size: 14px; font-weight: 400; line-height: 20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"></path></svg>저장한 룩 12개가 모두 지워져요</li>
+        <li style="display: flex; align-items: center; gap: 16px; font-size: 14px; font-weight: 400; line-height: 20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M9 7V4h6v3"></path><path d="M6 7l1 13h10l1-13"></path></svg>평가 기록과 스타일 프로필이 사라져요</li>
+        <li style="display: flex; align-items: center; gap: 16px; font-size: 14px; font-weight: 400; line-height: 20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><path d="M12 16h.01"></path></svg>지운 정보는 다시 되돌릴 수 없어요</li>
+        </ul>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <label for="withdraw-pw" style="font-size: 14px; line-height: 20px; font-weight: 700">비밀번호 확인</label>
+        <div style="position: relative">
+          <input id="withdraw-pw" type="password" placeholder="비밀번호 입력" style="width: 100%; height: 52px; box-sizing: border-box; padding: 0 16px; border-radius: 16px; border: none; background: #FFFFFF; font-size: 14px; line-height: 20px; font-family: inherit; color: #15171C"><button aria-label="비밀번호 보기" style="position: absolute; right: 4px; top: 4px; width: 44px; height: 44px; border: none; background: transparent; padding: 0; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A8D94" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+        </div>
+        <p style="margin: 0; font-size: 12px; line-height: 16px; color: #8A8D94">본인 확인을 위해 비밀번호를 입력해 주세요</p>
+      </div>
+      <label style="height: 44px; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 400; line-height: 20px"><input type="checkbox" style="width: 20px; height: 20px; margin: 0; accent-color: #15171C">위 내용을 모두 확인했어요</label>
+      <button aria-disabled="true" style="height: 52px; padding: 0 16px; border-radius: 26px; border: none; font-size: 16px; font-weight: 700; background: #E7E3DC; color: #8A8D94">탈퇴하기</button>
+    </section>
+  </div>
+</div>
+</div></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
